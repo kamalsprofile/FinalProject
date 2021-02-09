@@ -40,6 +40,11 @@ function Header() {
             </NavLink>
           </li>
           <li>
+            <NavLink to="/careers">
+              <span>Careers</span>
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/about">
               <span>About</span>
             </NavLink>

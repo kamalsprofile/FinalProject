@@ -1,0 +1,165 @@
+.header{
+    position: relative;
+    height: 95vh;
+    background-image: linear-gradient(
+        to right,
+        rgba(126, 213, 111, 0.808),
+        rgba(40, 180, 133, 0.808)),
+        url("./lock.png");
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.web_section {
+    background: #282c34;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 200px;
+    /* padding: 50px 0px; */
+}
+
+.web_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 200px;
+    /* padding: 50px 0px; */
+}
+
+.web_section  img {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.inner_section {
+    width : 100%
+}
+.web_section  h2 {
+    color: blue;
+    text-align: center;
+    margin: 10px 5px;
+}
+.desc {
+    text-align: center;
+    margin : 10px 20px;
+}
+
+.desc1 {
+    text-align: center;
+    margin : 10px 20px;
+}
+.desc1:hover {
+    color: blue;
+}
+.list {
+    width: 70%;
+    margin: 0px 80px;
+}
+
+.item {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.job_card {
+    border: 2px solid #282c34;
+    width: 90%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+    background: #282c34;
+    margin: 20px;
+}
+.btn1 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn1:hover {
+    color: blue;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+    font-weight: 700;
+    color: #282c34;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    color: blue;
+}
+
+.modal1 {
+    width: 80%;
+    background-color: white;
+    margin: 50px auto;
+    height: 40vh;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media screen and (min-width: 420px) {
+    .web_section {
+        background: #282c34;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        /* align-items: center; */
+        min-height: 400px;
+        padding: 0px 0px;
+        width: 100%;
+        /* margin: 20px 0px; */
+    }
+    .inner_section {
+        width : 60%;
+        padding: 0px 20px;
+    }
+    .web_section  h2 {
+        color: blue;
+        text-align: left;
+        margin: 20px 10px;
+        font-weight: bolder;
+    }
+    .web_section  img {
+        min-width: 40%;
+        min-height: 100%;
+    }
+    .desc {
+        text-align: left;
+        margin : 20px 20px;
+    }
+    .modal1 {
+        width: 30%
+    }
+
+.job_card {
+    border: 2px solid #282c34;
+    width: 300px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+    background: #282c34;
+    margin: 20px;
+}
+}

@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Notfound from "./pages/Notfound";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
+import Careers from "./pages/Careers";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/services" component={Services} />
+        <Route path="/careers" component={Careers} />
         <Route path="/contact" component={Contact} />
         <Route path="/about" component={About} />
         <Route path="/portfolio" component={Home} />
