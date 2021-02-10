@@ -24,7 +24,7 @@ function Header() {
       <div className="mi-header-inner">
         <div className="mi-header-image">
           <Link to="/">
-            <img src={information.brandImage} alt="brandimage" />
+            <img src={require("../assests/Doable.png")} alt="brandimage" />
           </Link>
         </div>
 

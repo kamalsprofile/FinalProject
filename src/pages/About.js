@@ -62,14 +62,14 @@ function About() {
                       <b>Freelance</b> 
                     </li>
                 </ul>
-                <a
+                {/* <a
                   rel="noopener noreferrer"
                   target="_blank"
                   href={"/#"}
                   className="mi-button"
                 >
                   Download CV
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

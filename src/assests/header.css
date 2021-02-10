@@ -107,6 +107,21 @@
     color: blue;
 }
 
+.icons:hover {
+    color: #282c34
+}
+
+.serve_btn {
+    background: #037fff;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+.serve_btn:hover {
+    color: black;
+}
+
 .modal1 {
     width: 80%;
     background-color: white;
@@ -124,14 +139,14 @@
         flex-direction: row;
         justify-content: flex-start;
         /* align-items: center; */
-        min-height: 400px;
+        min-height: 500px;
         padding: 0px 0px;
         width: 100%;
         /* margin: 20px 0px; */
     }
     .inner_section {
-        width : 60%;
-        padding: 0px 20px;
+        width : 53%;
+        padding: 20px 20px;
     }
     .web_section  h2 {
         color: blue;

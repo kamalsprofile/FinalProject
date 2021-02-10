@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import LineIcon from 'react-lineicons';
 
 function Socialicons(props){
@@ -8,16 +8,16 @@ function Socialicons(props){
 
   return (
     <ul className={props.bordered ? 'mi-socialicons mi-socialicons-bordered' : 'mi-socialicons'}>
-      {!socialLinks.facebook ? null : <li>
-        <a rel="noopener noreferrer" target="_blank" href={socialLinks.facebook}>
+      <li>
+        <a rel="noopener noreferrer" target="_blank" href={""}>
           <LineIcon name="facebook"/>
         </a>
-      </li>}
-      {!socialLinks.twitter ? null : <li>
+      </li>
+      <li>
         <a rel="noopener noreferrer" target="_blank" href={socialLinks.twitter}>
           <LineIcon name="twitter"/>
         </a>
-      </li>}
+      </li>
       {!socialLinks.pinterest ? null : <li>
         <a rel="noopener noreferrer" target="_blank" href={socialLinks.pinterest}>
           <LineIcon name="pinterest"/>
@@ -28,11 +28,11 @@ function Socialicons(props){
           <LineIcon name="behance"/>
         </a>
       </li>}
-      {!socialLinks.linkedin ? null : <li>
+      <li>
         <a rel="noopener noreferrer" target="_blank" href={socialLinks.linkedin}>
           <LineIcon name="linkedin"/>
         </a>
-      </li>}
+      </li>
       {!socialLinks.dribbble ? null : <li>
         <a rel="noopener noreferrer" target="_blank" href={socialLinks.dribbble}>
           <LineIcon name="dribbble"/>

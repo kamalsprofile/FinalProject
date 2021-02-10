@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import * as Icon from 'react-feather'
 import Sectiontitle from '../components/Sectiontitle'
 import Layout from '../components/Layout'
+import axios from 'axios'
+import { baseUrl } from '../assests/serverdetails'
 
 function Contact() {
   const [phoneNumbers, setPhoneNumbers] = useState(["112233", "009900"])
@@ -11,7 +13,8 @@ function Contact() {
     name: 'Ahmad',
     email: 'ahmadkamal@gmail.com',
     subject: 'In construction',
-    message: 'click on the Email above the address or call 720-2440453'
+    message: 'click on the Email above the address or call 720-2440453',
+    cv: null
   })
   const [error, setError] = useState(false)
   const [message, setMessage] = useState('')
@@ -34,14 +37,46 @@ function Contact() {
       setError(false)
       setMessage('You message has been sent!!!')
     }
-    const { name, email, message, subject } = formdata
+    const { name, email, message, subject, cv } = formdata
     console.log(formdata)
+    const config = {
+      headers: {
+        'content-type': 'multipart/form-data'
+      }
+    }
+    const formData = new FormData()
+    formData.append("cv", cv)
+    formData.append("name", name)
+    formData.append("email", email)
+    formData.append("message", message)
+    formData.append("subject", subject)
+
+    axios.post(`${baseUrl}/sendmail`, formData, config).then(response => {
+      console.log(response)
+      if(response?.data?.info?.message === 'success') {
+        alert("Sent successfully")
+      } else {
+        alert("Error sending mail.")
+      }
+    }).catch(error => {
+      console.log(error)
+    })
+
   }
   const handleChange = event => {
-    setFormdata({
-      ...formdata,
-      [event.currentTarget.name]: event.currentTarget.value
-    })
+    if(event.currentTarget.name === "cv") {
+      console.log(event.target.files)
+      setFormdata({
+        ...formdata,
+        [event.currentTarget.name]: event.target.files[0]
+      })
+    } else {
+      setFormdata({
+        ...formdata,
+        [event.currentTarget.name]: event.currentTarget.value
+      })
+    }
+    
   }
   const numberFormatter = number => {
     const phnNumber = number
@@ -106,6 +141,18 @@ function Contact() {
                       name='subject'
                       id='contact-form-subject'
                       value={formdata.subject}
+                    />
+                  </div>
+                  <div className='mi-form-field'>
+                    <label htmlFor='contact-form-subject'>
+                      Send File*
+                    </label>
+                    <input
+                      style={{paddingTop: '10px', paddingLeft: '20px'}}
+                      onChange={handleChange}
+                      type='file'
+                      name='cv'
+                      id='contact-form-subject'
                     />
                   </div>
                   <div className='mi-form-field'>

@@ -5,10 +5,38 @@ import Layout from "../components/Layout";
 import JobCard from "../components/JobCard";
 import * as Icon from 'react-feather'
 import Modal from 'react-modal'
+import axios from 'axios'
+import {baseUrl} from '../assests/serverdetails'
 
 function Careers() {
     const [showModal, setShowModal] = useState(false)
     const [file, setFile] = useState(null)
+
+
+    const sendCVHandler = () => {
+      console.log('handler')
+      const config = {
+        headers: {
+          'content-type': 'multipart/form-data'
+        }
+      }
+      const formData = new FormData()
+      formData.append("cv", file)
+      if(file) {
+        axios.post(`${baseUrl}/apply`, formData, config).then(response => {
+          console.log(response)
+          if(response?.data?.application) {
+            alert("Application sent successfully")
+          } else {
+            alert("Error uploading application")
+          }
+        }).catch(error => {
+          console.log(error)
+        })
+      } else {
+        alert("CV file is required.")
+      }
+    }
   return (
     <Layout>
       <div className="mi-about-area mi-section mi-padding-top">
@@ -17,25 +45,25 @@ function Careers() {
           <div className="">
             <h2>We have the following openings:</h2>
           </div>
-          <div className="row web_section1">
+          <div className="row web_section1" style={{display:'flex', flexDirection:'row', justifyContent: 'center'}}>
             <JobCard title="React Developer Required" onApply={() => setShowModal(true)} >
             <Icon.Monitor size="150"/>
             </JobCard>  
-            <JobCard title="Q/A Tester Required" onApply={() => console.log('lets apply')} >
+            <JobCard title="Q/A Tester Required" onApply={() => setShowModal(true)} >
             <Icon.Tool size="150"/>
             </JobCard>  
-            <JobCard title="Digital Marketing Specialist" onApply={() => console.log('lets apply')} >
+            <JobCard title="Digital Marketing Specialist" onApply={() => setShowModal(true)} >
             <Icon.Mail size="150"/>
             </JobCard>          
           </div>
-          <div className="row web_section1">
-            <JobCard title="React Developer Required" onApply={() => console.log('lets apply')} >
+          <div className="row web_section1" style={{display:'flex', flexDirection:'row', justifyContent: 'center'}}>
+            <JobCard title="React Developer Required" onApply={() => setShowModal(true)} >
             <Icon.Monitor size="150"/>
             </JobCard>  
-            <JobCard title="Q/A Tester Required" onApply={() => console.log('lets apply')} >
+            <JobCard title="Q/A Tester Required" onApply={() => setShowModal(true)} >
             <Icon.Tool size="150"/>
             </JobCard>  
-            <JobCard title="Digital Marketing Specialist" onApply={() => console.log('lets apply')} >
+            <JobCard title="Digital Marketing Specialist" onApply={() => setShowModal(true)} >
             <Icon.Monitor size="150"/>
             </JobCard>          
           </div>
@@ -51,7 +79,7 @@ function Careers() {
             <input type="file" name="file" id="file" className="inputfile" onChange={e => setFile(e.target.files[0])} />
             <label for="file">Choose a file</label>
             <h6 style={{color: 'black', textAlign:'center'}}>{file && file.name}</h6>
-            <button className="btn1" style={{color: 'black'}}> Send CV</button>
+            <button className="btn1" style={{color: 'black'}} onClick={sendCVHandler}> Send CV</button>
         </Modal>
       </div>
       <br />
