@@ -72,18 +72,25 @@ app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
 })
 
+
 const uri =
-  'mongodb+srv://ArslanGoraya:Minimart11@cluster0-wjxgm.mongodb.net/test?retryWrites=true&w=majority'
+  'mongodb+srv://akamal:Ahmad1234@cluster0.ug6by.mongodb.net/test?retryWrites=true&w=majority'
 mongoose.connect(uri, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true
 })
 
-const connection = mongoose.connection
+
+try {
+	const connection = mongoose.connection
 connection.once('open', () => {
   console.log('Mongoose Connection established')
 })
+}
+catch(err){
+	console.log(err)
+}
 
 app.post('/sendmail', (req, res) => {
 
