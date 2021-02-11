@@ -26,12 +26,12 @@ function Services() {
               </Card>
             </div>
             <div className="col-lg-4" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', cursor:'pointer'}}>
-            <Card image={require("../assests/react.png")} text="Digital Marketing">
+            <Card image={require("../assests/react.png")} text="Digital Marketing" onClick={() => history.push("/digital-marketing")}>
                 <Icon.Calendar className="icons"  size="150"/>
             </Card>
             </div>
             <div className="col-lg-4" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', cursor:'pointer'}}>
-            <Card image={require("../assests/react.png")} text="Logo Design">
+            <Card image={require("../assests/react.png")} text="Graphics Design" onClick={() => history.push("/graphics-design")}>
                 <Icon.Calendar className="icons"  size="150"/>
             </Card>
             </div>

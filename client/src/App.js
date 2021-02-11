@@ -8,6 +8,8 @@ import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import Careers from "./pages/Careers";
 import WebService from "./pages/WebService";
+import DigitalMarketing from "./pages/DigitalMarketing";
+import GraphicsDesign from "./pages/GraphicsDesign";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/services" component={Services} />
         <Route path="/web" component={WebService} />
+        <Route path="/graphics-design" component={GraphicsDesign} />
+        <Route path="/digital-marketing" component={DigitalMarketing} />
         <Route path="/careers" component={Careers} />
         <Route path="/contact" component={Contact} />
         <Route path="/about" component={About} />
