@@ -58,9 +58,9 @@ function Home(){
             <div className="col-lg-10 col-12">
               <div className="mi-home-content">
                 <h1>
-                  Hi, I am <span className="color-theme">Ahmad Kamal</span>
+                Welcome to <span className="color-theme">Doable</span>
                 </h1>
-                <p>Web and mobile app developer</p>
+                <p>software development company founded in 2020</p>
                 <Socialicons bordered />
               </div>
               <div style={{display: 'flex', alignItems:'center', justifyContent: 'center'}}>
@@ -71,35 +71,23 @@ function Home(){
         </div>
       </div>
       <div className="web_section" data-aos="fade-in" style={{background: 'transparent'}} >
-          <img alt="img" src={require("../assests/102.jpg")} width="50%"  />
+          <img alt="img" src={require("../assests/101.jpg")} width="50%" style={{borderRadius:"15px", opacity:".7", height:"80%"}}   />
           <div className="inner_section">
-            <h2>Web Development</h2>
-            <p className="desc">The software development services that our company provides cover the entire product life-cycle.</p>
-            <ul className="list">
-              <li className="item">Software architecture and design </li>
-              <li className="item">Implementation  </li>
-              <li className="item">Testing and quality assurance </li>
-              <li className="item">Technical documentation & user documentation </li>
-              <li className="item">Support </li>
-              <li className="item">Technical documentation & user documentation </li>
-              <li className="item">Support </li>
-            </ul>
+            <h2>WE OFFER PEACE OF MIND</h2>
+            <p className="desc">Doable is a full-stack software development company. We design and build software products for desktop, web, mobile, and connected devices.
+              We value excellence in execution and deliver complex software solutions to businesses all around the world.</p>
+
           </div>
       </div>
       <div data-aos="fade-in" className="web_section" style={{background:'transparent', margin: '100px 0px'}} >
           <div className="inner_section">
-            <h2>Graphics Design</h2>
-            <p className="desc">The software development services that our company provides cover the entire product life-cycle.</p>
-            <ul className="list">
-              <li className="item">Software architecture and design </li>
-              <li className="item">Implementation  </li>
-              <li className="item">Testing and quality assurance </li>
-              <li className="item">Technical documentation & user documentation </li>
-              <li className="item">Support </li>
-            </ul>
+            <h2>WE SOLVE PROBLEMS</h2>
+            <p className="desc">We push boundaries with creative and mind-bending solutions, 
+            while answering the most demanding requirements with precision and deep thought.</p>
           </div>
-          <img alt="img" src={require("../assests/101.jpg")} width="50%" />
+          <img alt="img" src={require("../assests/other.jpg")} width="50%" style={{borderRadius:"15px", opacity:".7", height:"80%"}}/>
         </div>
+        
     </Layout>
   );
 }

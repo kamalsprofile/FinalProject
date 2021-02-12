@@ -14,7 +14,7 @@ function About() {
             <div className="col-lg-6">
               <div className="mi-about-image">
                 <img
-                  src={require("../assests/react.png")}
+                  src={require("../assests/Doable.png")}
                   alt="about"
                 />
                 
@@ -23,53 +23,32 @@ function About() {
             <div className="col-lg-6">
               <div className="mi-about-content">
                 <h3>
-                  We are <span className="color-theme">Name of Company</span>
+                  We are <span className="color-theme">Doable</span>
                 </h3>
                 <p>
-                  Hello, I am Ahmad Kamal an engineer and a self-taugh front-end web
-                  developer. 
+                Our mission is to help businesses build the future and further grow into
+                 outstanding companies, using cutting-edge technologies and best practices in software development.
                   <br/>
-                  I enjoy building the first impressions of your
-                  websites that are intuitive, elegant and provide user interfaces that
-                  are responsive. 
+                  We are a mix of tech enthusiasts, software experts, product visionaries, and design magicians, bound together by a shared passion for developing innovative software products.
+
+Each project is unique and we are committed to find the ideal solutions to accomplish our partners' goals.
                   <br/>
-                  I am a quick learner, dependable and a problem solver.
                 </p>
                 <ul>
                   
                     <li>
-                      <b>Full Name</b> 
+                      <b>Phone : 123456</b> 
                     </li>
                     <li>
-                      <b>Age</b>  Years
+                      <b>Email : info@doable.dk</b> 
                     </li>
                     <li>
-                      <b>Phone</b> 
+                      <b>Address : Copenhagen</b> 
                     </li>
                     <li>
-                      <b>Nationality</b> 
-                    </li>
-                    <li>
-                      <b>Languages</b> 
-                    </li>
-                    <li>
-                      <b>Email</b> 
-                    </li>
-                    <li>
-                      <b>Address</b> 
-                    </li>
-                    <li>
-                      <b>Freelance</b> 
+                      <b>Number of Employees : 4</b> 
                     </li>
                 </ul>
-                {/* <a
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href={"/#"}
-                  className="mi-button"
-                >
-                  Download CV
-                </a> */}
               </div>
             </div>
           </div>

@@ -17,7 +17,7 @@ function WebService() {
             <h2>We offer:</h2>
           </div>
           <div className="row web_section1" style={{display:'flex', flexDirection:'row'}}>
-            <Icon.CameraOff  size="250" style={{margin: '0px 20px'}}/>
+            <Icon.Layout  size="250" style={{margin: '0px 20px'}}/>
             <p className="desc">
                 The software development services that our company provides cover the entire product life-cycle.
                 The software development services that our company provides cover the entire product life-cycle.

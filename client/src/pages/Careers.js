@@ -46,25 +46,25 @@ function Careers() {
             <h2>We have the following openings:</h2>
           </div>
           <div className="row web_section1" style={{display:'flex', flexDirection:'row', justifyContent: 'center'}}>
-            <JobCard title="React Developer Required" onApply={() => setShowModal(true)} >
+            <JobCard title="Web Developer Required" onApply={() => setShowModal(true)} >
             <Icon.Monitor size="150"/>
             </JobCard>  
             <JobCard title="Q/A Tester Required" onApply={() => setShowModal(true)} >
             <Icon.Tool size="150"/>
             </JobCard>  
             <JobCard title="Digital Marketing Specialist" onApply={() => setShowModal(true)} >
-            <Icon.Mail size="150"/>
+            <Icon.ShoppingBag size="150"/>
             </JobCard>          
           </div>
           <div className="row web_section1" style={{display:'flex', flexDirection:'row', justifyContent: 'center'}}>
-            <JobCard title="React Developer Required" onApply={() => setShowModal(true)} >
-            <Icon.Monitor size="150"/>
+            <JobCard title="Graphics Design" onApply={() => setShowModal(true)} >
+            <Icon.Image size="150"/>
             </JobCard>  
-            <JobCard title="Q/A Tester Required" onApply={() => setShowModal(true)} >
-            <Icon.Tool size="150"/>
+            <JobCard title="Mobile Apps Developer" onApply={() => setShowModal(true)} >
+            <Icon.Tablet size="150"/>
             </JobCard>  
-            <JobCard title="Digital Marketing Specialist" onApply={() => setShowModal(true)} >
-            <Icon.Monitor size="150"/>
+            <JobCard title="SEO Specialist" onApply={() => setShowModal(true)} >
+            <Icon.Search size="150"/>
             </JobCard>          
           </div>
         </div>

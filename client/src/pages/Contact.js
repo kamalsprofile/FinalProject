@@ -7,13 +7,13 @@ import { baseUrl } from '../assests/serverdetails'
 
 function Contact() {
   const [phoneNumbers, setPhoneNumbers] = useState(["112233", "009900"])
-  const [emailAddress, setEmailAddress] = useState(["abc@test.com"])
-  const [address, setAddress] = useState(["LTC"])
+  const [emailAddress, setEmailAddress] = useState(["info@doable.dk"])
+  const [address, setAddress] = useState(["Copenhagen"])
   const [formdata, setFormdata] = useState({
-    name: 'Ahmad',
-    email: 'ahmadkamal@gmail.com',
-    subject: 'In construction',
-    message: 'click on the Email above the address or call 720-2440453',
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
     cv: null
   })
   const [error, setError] = useState(false)
