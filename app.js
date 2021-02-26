@@ -14,8 +14,8 @@ const multer = require('multer')
 
 
 aws.config.update({
-	accessKeyId: "AKIAJLVGUF2KDQMYMNOQ",
-	secretAccessKey: "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",
+	accessKeyId: "AKIAJGNFHE22EYGH3HSQ",
+	secretAccessKey: "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",
 	region: "us-east-2",
 })
 
@@ -26,7 +26,7 @@ const s3 = new aws.S3()
 const fileUpload = multer({
 	storage: multerS3({
 		s3: s3,
-		bucket: 'pennantrade-bucket',
+		bucket: 'outtwig-bucket',
 		acl: 'public-read',
 		key: function (req, file, cb) {
 			cb(
