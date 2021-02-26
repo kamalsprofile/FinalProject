@@ -13,7 +13,7 @@ function Notfound() {
                 <div className="notfound-inner text-center">
                   <h1>404</h1>
                   <h3>Whoops!!! Page not found!</h3>
-                  <Link to="/" className="mi-button">
+                   <Link to="/" className="mi-button">
                     Back to Home
                   </Link>
                 </div>

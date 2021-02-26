@@ -5,17 +5,18 @@ const mongoose = require('mongoose')
 const Apply = require('./models/Apply.model')
 
 
-const aws = require('aws-sdk')
+const aws = require('aws-sdk')  // storing CV
 const multerS3 = require('multer-s3')
 
 const path = require('path')
 
 const multer = require('multer')
 
+
 aws.config.update({
-	accessKeyId: 'AKIAVXJG7LNEWBIM6E4P',
-	secretAccessKey: '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',
-	region: 'us-east-2',
+	accessKeyId: "AKIAJLVGUF2KDQMYMNOQ",
+	secretAccessKey: "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",
+	region: "us-east-2",
 })
 
 const s3 = new aws.S3()
@@ -25,7 +26,7 @@ const s3 = new aws.S3()
 const fileUpload = multer({
 	storage: multerS3({
 		s3: s3,
-		bucket: 'revision-audios',
+		bucket: 'pennantrade-bucket',
 		acl: 'public-read',
 		key: function (req, file, cb) {
 			cb(
@@ -95,8 +96,7 @@ catch(err){
 app.post('/sendmail', (req, res) => {
 
 	fileUpload(req, res, (error) => {
-		// console.log( 'requestOkokok', req.file );
-		// console.log( 'error', error );
+		
 		const { name, email, subject, message } = req.body
 		if (error) {
 			console.log('errors', error)
@@ -156,8 +156,6 @@ app.get('/applications', (req, res) => {
 
 app.post('/apply', (req, res) => {
   fileUpload(req, res, (error) => {
-		// console.log( 'requestOkokok', req.file );
-		// console.log( 'error', error );
 		if (error) {
 			console.log('errors', error)
 			res.json({ error: error })
